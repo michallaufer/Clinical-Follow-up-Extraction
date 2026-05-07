@@ -1008,7 +1008,7 @@ async def main():
     print("\n✅ Dataset generation complete.")
 
 if __name__ == "__main__":
-    # To run this on RunPod, you will type:
+    # To run this, you will type:
     # export OPENAI_API_KEY="your-key-here"
     # python -m src.data_gen
     asyncio.run(main())
