@@ -50,7 +50,8 @@ Intermediate structured representation:
 TestSpecification entity
 TimeSpecification entity
 ScheduledFor(TestSpecification, TimeSpecification)
-Dataset
+
+## Dataset
 
 The benchmark contains 2,000 synthetic outpatient-style notes generated from controlled structured skeletons.
 
@@ -67,19 +68,39 @@ The generation process varies:
 - distractor temporal context
 
 The dataset is synthetic and does not contain real patient data.
-Repository Structure
+
+The dataset is synthetic and does not contain real patient data.
+
+## Repository Structure
+
+```text
 .
+├── README.md
+├── requirements.txt
 ├── main.py
 ├── run_gpu.py
 ├── src/
+│   ├── data_gen.py
+│   ├── data_utils.py
+│   ├── evaluate.py
+│   ├── inference.py
+│   ├── ontology.py
+│   ├── plots.py
+│   ├── time_utils.py
+│   ├── train_biobert.py
+│   └── train_llama.py
 ├── data/
-│   └── README.md
+│   ├── README.md
+│   └── synthetic_clinical_notes.csv
 ├── models/
 │   └── README.md
-├── results/
-│   └── README.md
-├── requirements.txt
-└── README.md
+└── results/
+    ├── README.md
+    ├── seen_vs_oov_comparison.png
+    ├── biobert_ner_token_report_seen.csv
+    └── biobert_ner_token_report_oov.csv
+```
+
 ## Installation
 
 Create a Python environment:
@@ -140,15 +161,9 @@ Time offset MAE — mean absolute error in days on matched actions
 Bootstrap 95% confidence intervals by note-level resampling
 Notes on Model Checkpoints
 
-Model weights are not included in this repository by default. Large files such as:
+Model weights are not included in this repository by default..
 
-*.bin
-*.pt
-*.safetensors
-
-should be stored externally or managed with Git LFS.
-
-Citation
+##Citation
 
 If using this code, please cite the accompanying project report:
 
