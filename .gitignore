@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Environments
+.env
+.venv/
+venv/
+env/
+*.env
+
+# Secrets / credentials
+OPENAI_API_KEY*
+runpod*.json
+*credentials*
+*secret*
+*.pem
+
+# Logs
+*.log
+logs/
+
+# Large model/checkpoint files
+models/
+checkpoints/
+*.pt
+*.bin
+*.safetensors
+*.ckpt
+*.pth
+
+# Large archives / RunPod outputs
+*.tgz
+*.tar.gz
+*.zip
+runpod_results_*
+ner_plot_results_*
+
+# Data files
+data/*.csv
+data/*.json
+data/*.jsonl
+!data/README.md
+!data/sample_data.csv
+
+# Results
+results/*.json
+results/*.csv
+results/*.png
+!results/README.md
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
