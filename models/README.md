@@ -3,7 +3,7 @@
 Model checkpoints are not committed to this repository because they may be large.
 
 Expected local model directories:
-
+```text
 models/biobert_joint_seen_oov/
 models/llama-3-seen-oov-results/
 models/eval_seen_oov/
