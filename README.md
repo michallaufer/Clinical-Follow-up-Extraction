@@ -29,17 +29,21 @@ The target structured output is:
 
 Extracting this information enables downstream systems to track whether recommended follow-up tests, procedures, referrals, or monitoring actions were completed on time.
 
-Task Definition
+## Task Definition
 
-Input:
+**Input**
 
+```text
 clinical note text + visit date
+```
 
-Output:
+**Output**
 
+```json
 [
   {"action": "canonical TestSpecification", "days_offset": 14}
 ]
+```
 
 Intermediate structured representation:
 
@@ -52,15 +56,15 @@ The benchmark contains 2,000 synthetic outpatient-style notes generated from con
 
 The generation process varies:
 
-clinical domain
-clinical scenario
-number of scheduled follow-up items
-TestSpecification label
-TimeSpecification phrasing
-plan-header style
-note layout
-linguistic style
-distractor temporal context
+- clinical domain
+- clinical scenario
+- number of scheduled follow-up items
+- TestSpecification label
+- TimeSpecification phrasing
+- plan-header style
+- note layout
+- linguistic style
+- distractor temporal context
 
 The dataset is synthetic and does not contain real patient data.
 Repository Structure
@@ -76,30 +80,40 @@ Repository Structure
 │   └── README.md
 ├── requirements.txt
 └── README.md
-Installation
+## Installation
 
 Create a Python environment:
 
+```bash
 python -m venv .venv
 source .venv/bin/activate
+```
 
 On Windows:
 
+```bash
 python -m venv .venv
 .venv\Scripts\activate
+```
 
 Install dependencies:
 
+```bash
 pip install -r requirements.txt
-Environment Variables
+```
+## Environment Variables
 
-For GPT-4o-mini evaluation, set:
+For GPT-4o-mini evaluation:
 
+```bash
 export OPENAI_API_KEY="your_api_key_here"
+```
 
-For BioBERT evaluation, set the trained model directory if needed:
+For BioBERT evaluation:
 
+```bash
 export BIOBERT_MODEL_DIR="models/biobert_joint_seen_oov"
+```
 
 Do not commit .env files or API keys.
 
