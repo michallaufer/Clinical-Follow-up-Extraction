@@ -1,0 +1,8 @@
+label,precision,recall,f1-score,support
+O,1.0,1.0,1.0,56918
+B-TEST,0.98,0.98,0.98,291
+I-TEST,0.99,0.96,0.98,639
+B-TIME,0.99,0.99,0.99,291
+I-TIME,1.0,0.99,1.0,905
+macro avg,0.99,0.98,0.99,59044
+weighted avg,1.0,1.0,1.0,59044
